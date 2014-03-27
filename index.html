@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en">  <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Nokia Lumia 900 in CSS3</title>
+  <meta name="description" content="A CSS3 demo featuring the Nokia Lumia 900.">
+  <meta name="author" content="Chris Heng">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<style type="text/css">
+#stage {
+  width: 800px;
+  height: 650px;
+  background-color: #010101;
+  margin: 100px auto;
+  position: relative;
+  -webkit-perspective: 1100px;
+  -moz-perspective: 1100px;
+  -ms-perspective: 1100px;
+  -o-perspective: 1100px;
+  perspective: 1100px;
+  -webkit-perspective-origin-x: 50%;
+  -moz-perspective-origin-x: 50%;
+  -ms-perspective-origin-x: 50%;
+  -o-perspective-origin-x: 50%;
+  perspective-origin-x: 50%;
+  -webkit-perspective-origin-y: 50%;
+  -moz-perspective-origin-y: 50%;
+  -ms-perspective-origin-y: 50%;
+  -o-perspective-origin-y: 50%;
+  perspective-origin-y: 50%;
+  z-index: 0;
+}
+#stage img.logo {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+#stage img.winphone {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+#top {
+  position: absolute;
+  z-index: 100;
+  top: 20px;
+  left: 40px;
+  width: 780px;
+  height: 500px;
+  -webkit-transform: rotateX(-20deg) rotateY(20deg) rotateZ(-20deg);
+  -moz-transform: rotateX(-20deg) rotateY(20deg) rotateZ(-20deg);
+  -ms-transform: rotateX(-20deg) rotateY(20deg) rotateZ(-20deg);
+  -o-transform: rotateX(-20deg) rotateY(20deg) rotateZ(-20deg);
+  transform: rotateX(-20deg) rotateY(20deg) rotateZ(-20deg);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+#bottom {
+  position: absolute;
+  z-index: 50;
+  top: 520px;
+  left: 40px;
+  width: 780px;
+  height: 300px;
+  -webkit-transform: rotateY(12deg) rotateZ(-25.5deg) rotateX(70deg) translateX(172px) translateY(25px) translateZ(90px);
+  -moz-transform: rotateY(12deg) rotateZ(-29deg) rotateX(70deg) translateX(192px) translateY(25px) translateZ(110px);
+  -ms-transform: rotateY(12deg) rotateZ(-25.5deg) rotateX(70deg) translateX(172px) translateY(25px) translateZ(90px);
+  -o-transform: rotateY(12deg) rotateZ(-25.5deg) rotateX(70deg) translateX(172px) translateY(25px) translateZ(90px);
+  transform: rotateY(12deg) rotateZ(-25.5deg) rotateX(70deg) translateX(172px) translateY(25px) translateZ(90px);
+}
+#top div.caption {
+  display: block;
+  position: absolute;
+  left: -10px;
+  bottom: 195px;
+  background-color: #010101;
+  width: 190px;
+  height: 330px;
+  padding: 10px;
+}
+#top div.lumia900 {
+  display: block;
+  position: absolute;
+  left: 200px;
+  bottom: 0;
+  width: 320px;
+  height: 600px;
+  -moz-transform-style: preserve-3d;
+}
+#top div.lumia900 div.top {
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotateX(90deg) translateY(30px) translateZ(24px);
+  -moz-transform: rotateX(90deg) translateY(30px) translateZ(24px);
+  -ms-transform: rotateX(90deg) translateY(30px) translateZ(24px);
+  -o-transform: rotateX(90deg) translateY(30px) translateZ(24px);
+  transform: rotateX(90deg) translateY(30px) translateZ(24px);
+}
+#top div.lumia900 div.side {
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: rotateY(-90deg) translateX(28px) translateZ(24px);
+  -moz-transform: rotateY(-90deg) translateX(28px) translateZ(24px);
+  -ms-transform: rotateY(-90deg)) translateX(28px) translateZ(24px);
+  -o-transform: rotateY(-90deg) translateX(28px) translateZ(24px);
+  transform: rotateY(-90deg) translateX(28px) translateZ(24px);
+}
+#top div.lumia900 div.front {
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translate3d(0, 0, 50px);
+  -moz-transform: translate3d(0, 0, 50px);
+  -ms-transform: translate3d(0, 0, 50px);
+  -o-transform: translate3d(0, 0, 50px);
+  transform: translate3d(0, 0, 50px);
+}
+#gloss-mask {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  display: block;
+  width: 300px;
+  height: 560px;
+  -webkit-mask-box-image: url(img/lumia_phone_mask.png);
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  border-radius: 25px;
+  -webkit-transform: translate3d(0, 0, 51px);
+  -moz-transform: translate3d(0, 0, 51px);
+  -ms-transform: translate3d(0, 0, 51px);
+  -o-transform: translate3d(0, 0, 51px);
+  transform: translate3d(0, 0, 51px);
+}
+#gloss {
+  display: block;
+  width: 300px;
+  height: 560px;
+  -webkit-mask-image: -webkit-gradient(
+    linear,
+    right top,
+    left bottom,
+    color-stop(0.4, rgba(0,0,0,1)),
+    color-stop(0.8, rgba(0,0,0,0))
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right 9%,
+    color-stop(0.66, rgba(255,255,255,0)),
+    color-stop(0.66, rgba(255,255,255,1)),
+    color-stop(1, rgba(255,255,255,0))
+  );
+  opacity: 0.3;
+}
+#top p, #bottom p {
+  width: 90px;
+  height: 90px;
+  display: block;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 10px solid #010101;
+}
+#top p.row1 { bottom: 585px; }
+#top p.row2 { bottom: 485px; }
+#top p.row3 { bottom: 385px; }
+#top p.row4 { bottom: 285px; }
+#top p.row5 { bottom: 185px; }
+#top p.row6 { bottom: 85px; }
+#top p.row7 { bottom: -5px; border-bottom: 0; }
+#bottom p.row1 { top: 0; }
+#bottom p.row2 { top: 100px; }
+#bottom p.row3 { top: 200px; }
+#top p.col1, #bottom p.col1 { left: -100px; }
+#top p.col2, #bottom p.col2 { left: 0; }
+#top p.col3, #bottom p.col3 { left: 100px; }
+#top p.col4, #bottom p.col4 { left: 200px; }
+#top p.col5, #bottom p.col5 { left: 300px; }
+#top p.col6, #bottom p.col6 { left: 400px; }
+#top p.col7, #bottom p.col7 { left: 500px; }
+#top p.col8, #bottom p.col8 { left: 600px; }
+#top p.col9, #bottom p.col9 { left: 700px; }
+.color1 { background-color: #107BBF; }
+.color2 { background-color: #8CBF40; }
+.color3 { background-color: #EC2091; }
+.color4 { background-color: #12B7BD; }
+.color5 { background-color: #F8951E; }
+.color6 { background-color: #007F7F; }
+.color7 { background-color: #8C51A1; }
+</style>
+
+<body>
+  <div id="container" class="container">
+    <section id="stage">
+      <img class="logo" src="img/lumia_logo.png" width="250"/>
+      <img class="winphone" src="img/lumia_windows_phone.png" width="100"/>
+      <div id="top">
+        <p class="row3 col1 color1"></p>
+        <p class="row5 col1 color2"></p>
+        <p class="row7 col2 color1"></p>
+        <p class="row6 col3 color5"></p>
+        <p class="row6 col7 color3"></p>
+        <p class="row4 col8 color1"></p>
+        <p class="row5 col8 color4"></p>
+        <p class="row7 col8 color6"></p>
+        <p class="row3 col9 color2"></p>
+        <div class="caption">
+          <img src="img/lumia_live_large.png" width="180"/>
+          <ul>
+          <li>Large, 4.3" ClearBack display for optimal viewing indoors and out</li>
+          <li>1.4 GHz processor, 4G LTE and IE9 with HTML5 support for ideal web browsing experience and performance</li>
+          <li>Distinct Nokia polycarbonate unibody Design and high capacity 1830 mAH battery</li>
+          </ul>
+        </div>
+        <div class="lumia900">
+          <div class="top">
+            <img src="img/lumia_phone_600_top.png" width="320"/>
+          </div>
+          <div class="side">
+            <img src="img/lumia_phone_600_side.png" style="height: 595px"/>
+          </div>
+          <div class="front">
+            <img src="img/lumia_phone_600b.png" width="320"/>
+            <div id="gloss-mask"><div id="gloss"></div></div>
+          </div>
+        </div>
+      </div>
+      <div id="bottom">
+        <p class="row1 col1 color3"></p>
+        <p class="row1 col2 color4"></p>
+        <p class="row1 col5 color7"></p>
+        <p class="row1 col9 color5"></p>
+        <p class="row2 col3 color2"></p>
+        <p class="row2 col4 color6"></p>
+        <p class="row2 col8 color7"></p>
+        <p class="row3 col4 color1"></p>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>A Webkit experiment by <a href="https://github.com/gigablah">Chris Heng</a>.</p>
+      <p>This site is not operated by, sponsored by, endorsed by, or affiliated with Nokia or Microsoft.</p>
+      <p>All trademarks, logos and images are the property of their respective owners.</p>
+      <div class="fb-like" data-href="http://kuanyen.net/lumia/" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="segoe ui"></div>
+    </footer>
+  </div>
+  <script src="js/modernizr.js"></script>
+  <script src="js/jquery.js"></script>
+  <script>
+    (function(){
+      var all = $.event.props,
+        len = all.length,
+        res = [];
+      while (len--) {
+        var el = all[len];
+        if (el != 'layerX' && el != 'layerY') res.push(el);
+      }
+      $.event.props = res;
+    }());
+    $(document).ready(function() {
+      $('body').bind('mousemove', function(event) {
+        var offsetX = event.pageX - this.offsetLeft;
+        var offsetY = event.pageY - this.offsetTop;
+        var origin = (100 * offsetX / this.offsetWidth) + '% ' + (100 * offsetY / this.offsetHeight) + '%';
+        var opacity = (0.5 * (this.offsetWidth - offsetX) / this.offsetWidth);
+        var colorstop = Math.min(1, offsetX / this.offsetWidth) - 0.01;
+        var endY = 30 * (this.offsetHeight - offsetY) / this.offsetHeight;
+        var edge = Math.max(0, (this.offsetWidth - (offsetX - 150) * 2) / this.offsetWidth);
+        var edge2 = Math.max(0, (this.offsetWidth - offsetX * 2) / this.offsetWidth - 0.5);
+        var gradient = '-webkit-gradient(linear, left top, right ' + endY + '%, color-stop(' + colorstop + ', rgba(255,255,255,' + edge + ')), color-stop(' + colorstop + ', rgba(255,255,255,1)), color-stop(1, rgba(255,255,255,' + edge + ')))';
+        var mask = '-webkit-gradient(linear, right top, left bottom, color-stop(0.4, rgba(0,0,0,1)), color-stop(0.8, rgba(0,0,0,' + edge2 + ')))';
+        $('#stage').css('-webkit-perspective-origin', origin);
+        $('#stage').css('-moz-perspective-origin', origin);
+        $('#stage').css('-ms-perspective-origin', origin);
+        $('#stage').css('-o-perspective-origin', origin);
+        $('#stage').css('perspective-origin', origin);
+        $('#gloss').css('-webkit-mask-image', mask);
+        $('#gloss').css('background', gradient);
+        $('#gloss').css('opacity', opacity);
+      });
+    });
+  </script>
+  <!--<script>
+    window._gaq = [['_setAccount','UA-30664307-1'],['_setDomainName','kuanyen.net'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>-->
+  
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+
+</body>
+</html>

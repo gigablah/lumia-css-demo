@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en">  <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Nokia Lumia 900 in CSS3</title>
+  <meta name="description" content="A CSS3 demo featuring the Nokia Lumia 900.">
+  <meta name="author" content="Chris Heng">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<style type="text/css">
+#stage {
+  width: 800px;
+  height: 600px;
+  background-color: #010101;
+  margin: 100px auto;
+  position: relative;
+  -webkit-perspective: 800;
+  -webkit-perspective-origin-x: 50%;
+  -webkit-perspective-origin-y: 50%;
+}
+#top {
+  position: absolute;
+  z-index: 100;
+  top: 10px;
+  left: 10px;
+  width: 780px;
+  height: 500px;
+  background-color: #eee;
+  -webkit-transform: rotateX(-20deg) rotateY(20deg) rotateZ(-20deg);
+}
+#bottom {
+  position: absolute;
+  z-index: 120;
+  top: 510px;
+  left: 10px;
+  width: 780px;
+  height: 300px;
+  background-color: #bbb;
+  -webkit-transform: rotateY(12deg) rotateZ(-25.5deg) rotateX(70deg) translateX(175px) translateY(20px) translateZ(90px);
+}
+</style>
+
+<body>
+  <div id="container" class="container">
+    <section id="stage">
+      <div id="top">
+        <p class=""></p>
+      </div>
+      <div id="bottom">
+      </div>
+    </section>
+    <footer class="footer">
+      <p>Authored by Chris Heng</p>
+    </footer>
+  </div>
+  <script src="js/modernizr.js"></script>
+  <script src="js/jquery.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('body').bind('mousemove', function(event) {
+        var offsetX = event.pageX - this.offsetLeft;
+        var offsetY = event.pageY - this.offsetTop;
+        var originStyle = (100 * offsetX / this.offsetWidth) + '% ' + (100 * offsetY / this.offsetHeight) + '%';
+        $('#stage').css('-webkit-perspective-origin', originStyle);
+      });
+    });
+  </script>
+  <!--<script> // Change UA-XXXXX-X to be your site's ID
+    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+    Modernizr.load({
+      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+    });
+  </script>-->
+
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+
+</body>
+</html>
